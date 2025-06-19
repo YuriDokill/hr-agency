@@ -1,0 +1,482 @@
+main {
+  padding-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 120px);
+  padding: 120px 20px 20px;
+  box-sizing: border-box;
+}
+
+body {
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 80px;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+.auth-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cont {
+  overflow: hidden;
+  position: relative;
+  width: 1200px;
+  height: 800px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.form {
+  position: relative;
+  width: 854px;
+  height: 100%;
+  transition: transform 1.2s ease-in-out;
+  padding: 65px 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sub-cont {
+  overflow: hidden;
+  position: absolute;
+  left: 854px;
+  top: 0;
+  width: 1200px;
+  height: 100%;
+  padding-left: 346px;
+  background: #fff;
+  transition: transform 1.2s ease-in-out;
+}
+.cont.s--signup .sub-cont {
+  transform: translate3d(-854px, 0, 0);
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  height: 55px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  background: #E76D40;
+  font-weight: 600;
+}
+
+.img {
+  overflow: hidden;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 346px;
+  height: 100%;
+  padding-top: 480px;
+}
+.img:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1200px;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 1.2s ease-in-out;
+}
+.img:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.cont.s--signup .img:before {
+  transform: translate3d(854px, 0, 0);
+}
+.img__text {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 65px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  transition: transform 1.2s ease-in-out;
+}
+.img__text h2 {
+  margin-bottom: 15px;
+  font-weight: normal;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 34px;
+}
+.img__text p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.img__text.m--up {
+  transform: translateX(0);
+}
+.cont.s--signup .img__text.m--up {
+  transform: translateX(692px);
+}
+.img__text.m--in {
+  transform: translateX(-692px);
+}
+.cont.s--signup .img__text.m--in {
+  transform: translateX(0);
+}
+.img__btn {
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+  width: 180px;
+  height: 50px;
+  margin: 0 auto;
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  cursor: pointer;
+}
+.img__btn:after {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 50px;
+}
+.img__btn span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.2s;
+}
+.img__btn span.m--in {
+  transform: translateY(-110px);
+}
+.cont.s--signup .img__btn span.m--in {
+  transform: translateY(0);
+}
+.cont.s--signup .img__btn span.m--up {
+  transform: translateY(110px);
+}
+
+h2 {
+  width: 100%;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+label {
+  display: block;
+  width: 400px;
+  margin: 25px auto 0;
+  text-align: center;
+}
+label span {
+  font-size: 16px;
+  color: rgba(102, 102, 102, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  border: none !important;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4) !important;
+  text-align: center;
+  background-color: transparent;
+  outline: none !important;
+  font-family: "DM Sans", sans-serif;
+  box-shadow: none !important;
+}
+
+.forgot-pass {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+}
+.forgot-pass a {
+  color: #E76D40;
+  text-decoration: none;
+}
+.forgot-pass a:hover {
+  text-decoration: underline;
+  color: #E76D40;
+}
+
+.submit {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background: #E76D40;
+  text-transform: uppercase;
+  border-radius: 50px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.sign-in {
+  transition-timing-function: ease-out;
+}
+.cont.s--signup .sign-in {
+  transition-timing-function: ease-in-out;
+  transition-duration: 1.2s;
+  transform: translate3d(854px, 0, 0);
+}
+
+.sign-up {
+  transform: translate3d(-1200px, 0, 0);
+}
+.cont.s--signup .sign-up {
+  transform: translate3d(0, 0, 0);
+}
+
+.role-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 25px auto 0;
+  width: 400px;
+}
+
+.role-option {
+  width: 100%;
+}
+
+.role-radio {
+  display: none;
+}
+.role-radio:checked + .role-label {
+  background: rgba(102, 102, 102, 0.5);
+  color: white;
+}
+
+.role-label {
+  display: block;
+  padding: 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+}
+.role-label:hover {
+  border-color: #aaa;
+}
+
+@media (max-width: 1200px) {
+  .cont {
+    width: 95%;
+    height: 750px;
+  }
+  .img__text {
+    padding: 0 15px;
+  }
+  .img__text h2 {
+    font-size: 28px;
+  }
+  .img__text p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 950px) {
+  .cont {
+    width: 95%;
+    height: 700px;
+  }
+}
+@media (max-width: 800px) {
+  .auth-wrapper {
+    padding: 10px;
+  }
+  .cont {
+    height: auto;
+    min-height: 650px;
+  }
+  .sub-cont {
+    position: relative;
+    left: 0;
+    padding-left: 0;
+  }
+  .img {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    padding-top: 0;
+  }
+  .img:before {
+    width: 100%;
+  }
+  .img__text {
+    top: 40px;
+  }
+  .img__text h2 {
+    font-size: 26px;
+  }
+  .img__text p {
+    font-size: 16px;
+  }
+  .img__text.m--up, .img__text.m--in {
+    transform: none;
+  }
+  .img__btn {
+    margin: 30px auto;
+    width: 160px;
+    height: 45px;
+    font-size: 16px;
+  }
+  .form {
+    width: 100%;
+    padding: 40px 20px;
+  }
+  .sign-in,
+  .sign-up {
+    transform: none !important;
+  }
+  .role-selector {
+    width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .cont {
+    height: auto;
+  }
+  .img {
+    height: 220px;
+  }
+  .img__text {
+    top: 30px;
+  }
+  h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  label {
+    width: 90%;
+  }
+  .submit {
+    width: 90%;
+  }
+  .role-selector {
+    width: 90%;
+  }
+  .forgot-pass {
+    font-size: 14px;
+  }
+  .img__btn {
+    width: 140px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.auth-form .input-container {
+  width: 400px;
+  margin: 25px auto 0;
+  text-align: center;
+}
+.auth-form .custom-input {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  border: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4) !important;
+  text-align: center;
+  background: none;
+  outline: none !important;
+  font-family: "DM Sans", sans-serif;
+  border-radius: 0;
+}
+.auth-form .custom-button {
+  border-radius: 50px !important;
+}
+
+.role-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 25px auto 0;
+  width: 400px;
+}
+.role-selector .role-option {
+  width: 100%;
+}
+
+.img__btn {
+  width: 200px !important;
+  height: 55px !important;
+  font-size: 18px !important;
+}
+.img__btn span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.sign-up .submit {
+  margin-top: 30px !important;
+  margin-bottom: 15px !important;
+}
+
+.cont {
+  height: 850px !important;
+}
+
+@media (max-width: 800px) {
+  .img__btn {
+    width: 180px !important;
+    height: 50px !important;
+    font-size: 16px !important;
+  }
+  .cont {
+    min-height: 700px !important;
+  }
+}

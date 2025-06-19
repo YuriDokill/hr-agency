@@ -1,0 +1,15 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php [L]
+
+<Files ~ "\.scss$">
+    Order allow,deny
+    Deny from allow
+</Files>
+
+<IfModule mod_rewrite.c>
+    # Разрешить прямой доступ к файлам в uploads
+    RewriteCond %{REQUEST_URI} ^/uploads/ [NC]
+    RewriteRule ^ - [L]
+</IfModule>
