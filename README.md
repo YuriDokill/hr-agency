@@ -9,7 +9,7 @@
 
 Платформа для управления кандидатами, вакансиями и поиска специалистов. Проект создан на базе Yii 2 Basic Project Template с расширенной функциональностью.
 
-![Screenshot](hr-agency.png)
+![Screenshot](screenshots/hr-agency.png)
 
 ## Основные возможности
 
@@ -103,12 +103,6 @@ $candidates = Candidate::find()
 ## Лицензия
 
 Проект распространяется под лицензией MIT. См. [LICENSE.md](LICENSE.md).
-
-## Скриншоты
-
-| Поиск кандидатов | Просмотр профиля |
-|------------------|------------------|
-| ![Search](screenshots/search.png) | ![Profile](screenshots/profile.png) |
 
 ## Разработка
 
